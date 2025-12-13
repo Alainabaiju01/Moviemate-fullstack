@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000"; // Flask backend
+const BASE_URL = "https://moviemate-backend-g5qx.onrender.com"; // Flask backend
 
 // GET wishlist
 export const getWishlistAPI = async () => {
