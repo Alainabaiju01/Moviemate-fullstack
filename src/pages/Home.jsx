@@ -47,52 +47,43 @@ function Home() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: "100vh",
+          height: "90vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
         }}
       >
-        <div className="text-center d-flex flex-column p-3">
-          <Link
-            to="/wish"
-            className="btn btn-light m-3"
-            style={{
-              padding: "15px 40px",
-              fontSize: "20px",
-              borderRadius: "12px",
-              fontFamily: "Georgia, serif",
-            }}
-          >
-            Your Wishlist
-          </Link>
+       <div className="text-center d-flex flex-column p-3">
+  <h1
+    style={{ fontSize: "50px" }}
+    className="text-white  m-3"
+  >
+    Your personal movie & series tracker!
+  </h1>
 
-          <Link
-            to="/watching"
-            className="btn btn-light m-3"
-            style={{
-              padding: "15px 40px",
-              fontSize: "20px",
-              borderRadius: "12px",
-              fontFamily: "Georgia, serif",
-            }}
-          >
-            Currently Watching
-          </Link>
+  {[
+    { text: "Your Wishlist", path: "/wish" },
+    { text: "Currently Watching", path: "/watching" },
+    { text: "Watched", path: "/watched" },
+  ].map((btn) => (
+    <Link
+      key={btn.path}
+      to={btn.path}
+      className="btn btn-light m-3"
+      style={{
+        width: "320px",          // ✅ SAME WIDTH
+        padding: "15px 0",
+        fontSize: "20px",
+        borderRadius: "12px",
+        fontFamily: "Georgia, serif",
+        alignSelf: "center",
+      }}
+    >
+      {btn.text}
+    </Link>
+  ))}
+</div>
 
-          <Link
-            to="/watched"
-            className="btn btn-light m-3"
-            style={{
-              padding: "15px 40px",
-              fontSize: "20px",
-              borderRadius: "12px",
-              fontFamily: "Georgia, serif",
-            }}
-          >
-            Watched
-          </Link>
-        </div>
       </div>
     </>
   );
