@@ -11,7 +11,7 @@ import {
 export default function Watched() {
   const [watched, setWatched] = useState([]);
 
-  // form state
+  
   const [title, setTitle] = useState("");
   const [genre, setGenre] = useState("");
   const [director, setDirector] = useState("");
@@ -20,7 +20,7 @@ export default function Watched() {
   const [rating, setRating] = useState(5);
   const [review, setReview] = useState("");
 
-  // filter state
+  
   const [filterGenre, setFilterGenre] = useState("all");
   const [filterPlatform, setFilterPlatform] = useState("all");
 
@@ -63,7 +63,7 @@ export default function Watched() {
     setWatched((prev) => prev.filter((w) => w.id !== id));
   };
 
-  // ✅ FILTER LOGIC (FIXED)
+ 
   const filteredWatched = watched.filter((item) => {
     const genreMatch =
       filterGenre === "all" ||
@@ -87,7 +87,7 @@ export default function Watched() {
           backgroundColor: "#ba5050ff",
         }}
       >
-        {/* Title + Filter */}
+       
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h3>✅ Watched Movies & Shows</h3>
 
@@ -99,7 +99,6 @@ export default function Watched() {
           />
         </div>
 
-        {/* Add Form */}
         <form
           onSubmit={handleAddWatched}
           className="bg-white p-4 rounded mb-4 mx-auto"
