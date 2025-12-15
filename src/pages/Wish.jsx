@@ -69,7 +69,7 @@ export default function Wishlist() {
     );
   };
 
-  // ✅ FILTER LOGIC (CASE-SAFE & RELIABLE)
+
   const filteredWishlist = wishlist.filter((item) => {
     const genreMatch =
       filterGenre === "all" ||
@@ -90,7 +90,7 @@ export default function Wishlist() {
         className="p-4"
         style={{ backgroundColor: "#ba5050ff", minHeight: "100vh" }}
       >
-        {/* Header + Filter */}
+        
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h3>📌 Wishlist</h3>
 
@@ -102,7 +102,7 @@ export default function Wishlist() {
           />
         </div>
 
-        {/* Add Form */}
+        
         <form
           onSubmit={handleAdd}
           className="bg-white p-4 rounded mb-4 mx-auto"
@@ -150,7 +150,7 @@ export default function Wishlist() {
           </button>
         </form>
 
-        {/* Grid */}
+       
         <div className="row g-4">
           {filteredWishlist.map((item) => {
             const id = item.id || item._id;
