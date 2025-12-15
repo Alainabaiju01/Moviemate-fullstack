@@ -12,7 +12,7 @@ import {
 export default function Watching() {
   const [watching, setWatching] = useState([]);
 
-  // form state
+
   const [title, setTitle] = useState("");
   const [genre, setGenre] = useState("");
   const [director, setDirector] = useState("");
@@ -22,7 +22,7 @@ export default function Watching() {
   const [currentEpisode, setCurrentEpisode] = useState(1);
   const [loading, setLoading] = useState(false);
 
-  // filter state
+
   const [filterGenre, setFilterGenre] = useState("all");
   const [filterPlatform, setFilterPlatform] = useState("all");
 
@@ -93,7 +93,7 @@ export default function Watching() {
     setWatching((prev) => prev.filter((w) => w.id !== id));
   };
 
-  // ✅ FILTER LOGIC (FIXED – CASE SAFE)
+  
   const filteredWatching = watching.filter((item) => {
     const genreMatch =
       filterGenre === "all" ||
@@ -129,7 +129,7 @@ export default function Watching() {
           />
         </div>
 
-        {/* Add Watching Form */}
+       
         <form
           onSubmit={handleAddWatching}
           className="bg-white p-4 rounded mb-4 mx-auto"
@@ -209,7 +209,7 @@ export default function Watching() {
           </button>
         </form>
 
-        {/* Grid */}
+   
         <div
           style={{
             display: "grid",
