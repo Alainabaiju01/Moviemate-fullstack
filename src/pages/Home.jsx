@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
-      {/* Header / Logo */}
+      
       <nav
         style={{
           display: "flex",
@@ -71,7 +71,7 @@ function Home() {
       to={btn.path}
       className="btn btn-light m-3"
       style={{
-        width: "320px",          // ✅ SAME WIDTH
+        width: "320px",          
         padding: "15px 0",
         fontSize: "20px",
         borderRadius: "12px",
